@@ -1,0 +1,333 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --main-color: #f7f0e6;
+  --alt-color: #27273f;
+  --bg-color: #181c27;
+  --white-color: #f6f6f6;
+  --orange-color: #de8859;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: capitalize;
+}
+body {
+  font-family: tahoma, sans-serif, Arial, Helvetica;
+  background-color: var(--bg-color);
+}
+/* Start Componant */
+.today-menu {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 15px;
+  margin-top: 15px;
+  cursor: pointer;
+  font-weight: 800;
+  transition: 0.3s;
+}
+.today-menu:hover {
+  background-color: var(--orange-color);
+  color: var(--main-color);
+}
+.head-title {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 14px;
+}
+.head-title > h1 {
+  color: var(--orange-color);
+}
+.head-title > p {
+  color: var(--white-color);
+}
+/* End Componant */
+/*Start web-size===========*/
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  margin: auto;
+}
+/*SMAll===============*/
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/*MEDIUM============*/
+@media (min-width: 992) {
+  .container {
+    width: 970px;
+  }
+}
+/*LARGE=============*/
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/*End web-size===========*/
+/* Start Header */
+header {
+  background-color: var(--alt-color);
+}
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+header .container .logo {
+  color: var(--orange-color);
+  font-size: 32px;
+  font-weight: 800;
+}
+header .container ul {
+  display: flex;
+  align-items: center;
+}
+header .container ul li a {
+  color: var(--main-color);
+  font-size: 22px;
+  transition: 0.3s;
+  margin-right: 25px;
+}
+header .container ul li a:hover {
+  color: var(--orange-color);
+}
+/* End Header */
+/* Start Landing Page */
+.landing .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: calc(80vh - 78px);
+}
+.landing .text h1 {
+  font-size: 50px;
+  color: var(--orange-color);
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.landing .text p {
+  font-weight: normal;
+  color: var(--white-color);
+  font-size: 28px;
+  line-height: 1.4;
+}
+.landing .text p span {
+  display: block;
+}
+
+/* End Landing Page */
+/* Start The Week Food */
+
+.week-food .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 120px;
+}
+.week-food .container .box img {
+  position: relative;
+  border-radius: 20px;
+  z-index: 101;
+}
+.week-food .container .box::before {
+  content: "";
+  position: absolute;
+  width: 470px;
+  height: 470px;
+  border: 5px dashed var(--main-color);
+  z-index: 100;
+  border-radius: 20px;
+  transform: rotateZ(-15deg);
+}
+.week-food .container .text h6 {
+  color: var(--orange-color);
+  font-size: 14px;
+}
+.week-food .container .text h2 {
+  color: var(--main-color);
+  margin: 20px 0;
+}
+.week-food .container .text p {
+  color: var(--main-color);
+  line-height: 1.4;
+  font-weight: normal;
+  font-size: 14px;
+}
+.week-food .container .text button {
+  float: left;
+  margin: 20px 0;
+}
+
+/* End The Week Food */
+/* Start The best Foods */
+.best-food {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.best-food .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+.best-food .container .box {
+  padding: 20px 30px;
+  background-color: var(--main-color);
+  border-radius: 10px;
+  transition: 0.3s;
+  text-align: center;
+}
+.best-food .container .box:hover {
+  transform: translateY(-10px);
+}
+.best-food .container .box .text {
+  text-align: center;
+}
+.best-food .container .box img {
+  width: 300px;
+}
+.best-food .container .box h1 {
+  color: var(--alt-color);
+  margin: 10px 0;
+  font-size: 28px;
+}
+.best-food .container .box p {
+  color: var(--bg-color);
+  font-weight: 800;
+  margin: 20px 0 10px;
+}
+.best-food .container .box .price {
+  color: var(--orange-color);
+  font-weight: 800;
+  font-size: 22px;
+}
+/* End The best Foods */
+/* Start Services */
+.Services {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.Services .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+.Services .container .box {
+  border-radius: 10px;
+  text-align: center;
+}
+.Services .container .box .text {
+  text-align: center;
+}
+.Services .container .box img {
+  width: 300px;
+}
+.Services .container .box h1 {
+  color: var(--orange-color);
+  margin: 10px 0;
+  font-size: 28px;
+}
+.Services .container .box p {
+  color: var(--main-color);
+  line-height: 1.6;
+  font-size: 14px;
+}
+/* End Services */
+/* Start footer */
+footer .container {
+  text-align: center;
+  padding: 80px;
+  background-color: var(--main-color);
+}
+footer .container h1 {
+  color: var(--alt-color);
+  margin: 20px 0;
+}
+footer .container h1 span {
+  color: var(--alt-color);
+  display: block;
+  margin: 15px 0;
+}
+footer .container button {
+  padding: 10px 30px;
+  border-radius: 6px;
+  border: none;
+  background: var(--orange-color);
+  color: var(--white-color);
+  margin: 15px 0 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+footer .container button:hover {
+  background-color: var(--alt-color);
+}
+/* End footer */
+/* Start Web Size */
+@media (max-width: 1200px) {
+  .landing .container .pic img {
+    width: 400px;
+  }
+  .week-food .container .box img {
+    width: 400px;
+  }
+  .week-food .container .box::before {
+    width: 380px;
+    height: 380px;
+  }
+  .week-food .container {
+    gap: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .landing .container {
+    flex-direction: column;
+    margin-top: 50px;
+  }
+  .landing .container .pic img {
+    width: 300px;
+  }
+  .week-food .container {
+    flex-direction: column-reverse;
+  }
+  .week-food .container .box img {
+    width: 300px;
+  }
+  .week-food .container .box::before {
+    width: 280px;
+    height: 280px;
+  }
+  header .container .logo {
+    font-size: 20px;
+  }
+  header .container ul li a {
+    font-size: 14px;
+    margin-left: 15px;
+    margin-right: 0px;
+  }
+  .week-food {
+    padding-top: 50px;
+  }
+}
+/* End Web Size */
+.img {
+  height: 70%;
+}
